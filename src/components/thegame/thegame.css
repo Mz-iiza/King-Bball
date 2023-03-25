@@ -1,0 +1,264 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* ==========HEADER ========== */
+.app-container-opacity  {
+    background: rgb(59, 1, 1);
+    border-radius: 0px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    justify-content: center;
+  }
+
+header{
+    height: 100vh;
+    padding-top: 0;
+    overflow: hidden;
+}
+
+.header__container {
+    margin-top: 6.5rem;
+    text-align: center;
+    height: 100%;
+    position: relative;
+}
+.navigate {
+    margin-top: 1rem ;
+    display: flex;
+    gap: 1.2rem;
+    justify-content: center;
+}
+
+ .app-name {
+    margin: 20px 0 15px -5px;
+    min-width: 15vw;
+    background-image: linear-gradient(
+      -225deg,
+      #f8f6f1 10%,
+      #fff800 55%,
+      #ffa060 70%,
+      #ffa406 100%
+    );
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #fff;
+    background-clip: text;
+  
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 2s linear infinite;
+    display: inline-block;
+  }
+
+p{
+    font-family: "Dancing Script", cursive;
+    font-size: 95px;
+}
+
+  @keyframes textclip {
+    to {
+      background-position: 200% center;
+    }
+  }
+
+  /*===========TEAMS===========*/
+
+  .team__container {
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+}
+
+.teams {
+    background: var(--color-bg-variant);
+    border-radius: 2rem 2rem 2rem 2rem;
+    border: 1py solid var(--color-primary);
+    height:fit-content;
+    transition: var(--transition);
+}
+
+.teams:hover {
+    background: transparent;
+    border-color: var(--color-primary-variant);
+    backdrop-filter: blur(4.5px);
+    cursor:default;
+}
+
+.teams__head {
+   background: var(--color-primary);
+   padding: 2rem;
+   border-radius: 2rem 2rem 2rem 2rem;
+   box-shadow: 0 2rem 1 rem rgba(0, 0, 0, 0.1); 
+}
+
+.teams__head h3 {
+    color: var(--color-bg);
+    font-size: 1rem;
+    text-align: center;
+}
+
+.teams__list {
+    padding: 2rem;
+}
+
+.teams__list li {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 0.8rem;
+    color: #000;
+}
+
+.teams__list-icon {
+    color: var(--color-primary);
+    margin-top: 2px;
+}
+
+.teams__list p {
+    font-size:0.9rem;
+    color:#000;
+}
+
+    
+
+/*===========FOOTER===========*/
+footer {
+    background: var(--color-primary);
+    padding: 3rem 0;
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 7rem;
+    font-family: "Poppins", sans-serif;
+    background: var(--color-bg);
+    color: var(--color-white);
+    line-height: 2;
+    background-image: url("/src/assets/image4.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+}
+
+footer a {
+    color: var(--color-primary);
+}
+
+footer a:hover {
+    color: var(--color-light);
+}
+
+.footer__logo {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    display: inline-block;
+}
+
+.permalinks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin: 0 auto 3rem;
+}
+
+.footer__socials {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+}
+
+.footer__socials a {
+    background: transparent;
+    color: var(--color-primary);
+    padding: 0.8rem;
+    border-radius: 0.7rem;
+    display: flex;
+    border: 1px solid var(--color-primary);
+}
+
+.footer__socials a:hover {
+    background: transparent;
+    color: var(--color-light);
+    border-color: var(--color-light);
+}
+
+.footer_copyright {
+    margin-bottom: 1rem;
+    color: var(--color-primary);
+}
+
+
+
+/*======== MEDIA QUERIES (MEDIUM DEVICES) ========*/
+@media screen and (max-width: 1204px) {
+header {
+  height: 68vh;
+}
+
+.container.contactus__container{
+    grid-template-columns: 1fr;
+    gap: 2rem;
+   }
+
+.container.officials_container {
+    width: 60%;
+} 
+.team__container {
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+.team {
+  height: auto;
+}
+
+
+ }
+
+
+/*======== MEDIA QUERIES (small DEVICES) ========*/
+@media screen and (max-width: 600px) {
+ .header {
+    height: 100vh;
+  }
+
+  .header__socials{
+    display: none;
+  }
+
+  header p {
+    min-width: 15vw;
+    font-size: 60px;
+}
+
+  .container.contactus__container {
+    width: var(--container-width-sm);
+
+}
+.permalinks {
+    flex-direction: column;
+    gap: 1.5rem;
+   } 
+
+.footer__socials {
+    margin-bottom: 2.6rem;
+   }
+
+.container.officials_container {
+    width: var(--container-width-sm);
+} 
+.k_title {
+    width: var(--container-width-sm);
+} 
+.team__container {
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+ }
